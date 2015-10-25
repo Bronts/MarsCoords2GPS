@@ -58,12 +58,12 @@ class CoordsTransform {
         // 转换经度
         var dLon: Double = transformLon((wgLon - 105.0), y: wgLat - 35.0)
         
-        var radLat: Double = wgLat / 180.0 * CoordsTransform.Constants.pi
+        let radLat: Double = wgLat / 180.0 * CoordsTransform.Constants.pi
         var magic: Double = sin(radLat)
         
         magic = 1 - CoordsTransform.Constants.ee * magic * magic
         
-        var sqrtMagic: Double = sqrt(magic)
+        let sqrtMagic: Double = sqrt(magic)
         
         dLat = (dLat * 180.0) / ((CoordsTransform.Constants.a * (1 - CoordsTransform.Constants.ee)) / (magic * sqrtMagic) * CoordsTransform.Constants.pi)
         
@@ -90,7 +90,7 @@ class CoordsTransform {
         var gLng: Double
         var gLat: Double
         
-        var gpsCoords = transformGpsToMarsCoords(lon, wgLat: lat)
+        let gpsCoords = transformGpsToMarsCoords(lon, wgLat: lat)
         
         gLng = lon - (gpsCoords.mgLon - lon)
         gLat = lat - (gpsCoords.mgLat - lat)
@@ -191,12 +191,12 @@ class CoordsTransform {
         var bLng: Double
         var bLat: Double
         
-        var x = mLng
-        var y = mLat
+        let x = mLng
+        let y = mLat
         
-        var z: Double = sqrt(x * x + y * y) + 0.00002 * sin(y * CoordsTransform.Constants.x_pi)
+        let z: Double = sqrt(x * x + y * y) + 0.00002 * sin(y * CoordsTransform.Constants.x_pi)
         
-        var theta = atan2(y, x) + 0.000003 * cos(x * CoordsTransform.Constants.x_pi)
+        let theta = atan2(y, x) + 0.000003 * cos(x * CoordsTransform.Constants.x_pi)
         
         bLng = z * cos(theta) + 0.0065
         
@@ -222,12 +222,12 @@ class CoordsTransform {
         var mLng: Double
         var mLat: Double
             
-        var x = bLng - 0.0065
-        var y = bLat - 0.006
+        let x = bLng - 0.0065
+        let y = bLat - 0.006
             
-        var z = sqrt(x * x + y * y) - 0.00002 * sin(y * CoordsTransform.Constants.x_pi)
+        let z = sqrt(x * x + y * y) - 0.00002 * sin(y * CoordsTransform.Constants.x_pi)
             
-        var theta = atan2(y, x) - 0.000003 * cos(x * CoordsTransform.Constants.x_pi)
+        let theta = atan2(y, x) - 0.000003 * cos(x * CoordsTransform.Constants.x_pi)
             
         mLng = z * cos(theta)
         mLat = z * sin(theta)
