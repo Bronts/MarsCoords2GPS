@@ -18,8 +18,8 @@ print("火星经度：\(marsCoords.mgLon) \n")
 
 var gpsCoords = CoordsTransform.transformMarsToGpsCoords(marsCoords.mgLon, lat: marsCoords.mgLat)
 
-print("地球纬度：\(gpsCoords.gLat)")
-print("地球经度：\(gpsCoords.gLng) \n")
+print("从火星纬度转回的地球纬度：\(gpsCoords.gLat)")
+print("从火星经度转回的地球经度：\(gpsCoords.gLng) \n")
 
 var baiduCoords = CoordsTransform.transformMarsToBaiduCoords(marsCoords.mgLon, mLat: marsCoords.mgLat)
 

@@ -39,7 +39,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func transformGpsToMarsCoords(wgLon: Double, wgLat: Double) -> (mgLon : Double, mgLat: Double)
+    class func transformGpsToMarsCoords(_ wgLon: Double, wgLat: Double) -> (mgLon : Double, mgLat: Double)
     {
         var mgLon: Double
         var mgLat: Double
@@ -86,7 +86,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func transformMarsToGpsCoords(lon: Double, lat: Double) -> (gLng: Double, gLat: Double) {
+    class func transformMarsToGpsCoords(_ lon: Double, lat: Double) -> (gLng: Double, gLat: Double) {
         var gLng: Double
         var gLat: Double
         
@@ -109,7 +109,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func outOfChina(lon: Double, lat: Double) -> Bool
+    class func outOfChina(_ lon: Double, lat: Double) -> Bool
     {
         var isOutOfChina = false
         
@@ -134,7 +134,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func transformLat(x: Double, y: Double) -> Double
+    class func transformLat(_ x: Double, y: Double) -> Double
     {
         var ret: Double
         
@@ -160,7 +160,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func transformLon(x: Double, y: Double) -> Double
+    class func transformLon(_ x: Double, y: Double) -> Double
     {
         var ret: Double
         
@@ -186,7 +186,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func transformMarsToBaiduCoords(mLng: Double, mLat: Double) -> (bLng: Double, bLat: Double)
+    class func transformMarsToBaiduCoords(_ mLng: Double, mLat: Double) -> (bLng: Double, bLat: Double)
     {
         var bLng: Double
         var bLat: Double
@@ -217,7 +217,7 @@ class CoordsTransform {
     *                Date          Author             Operation
     *             2015-02-03     Yangzheng         Create Function
     ********************************************************************************/
-    class func transformBaiduToMarsCoords(bLng: Double, bLat: Double) -> (mLng: Double, mLat: Double)
+    class func transformBaiduToMarsCoords(_ bLng: Double, bLat: Double) -> (mLng: Double, mLat: Double)
     {
         var mLng: Double
         var mLat: Double
